@@ -1,0 +1,40 @@
+<div class="container-fluid bg-primary py-5 mb-5 page-header">
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 text-center">
+                <h1 class="display-3 text-white animated slideInDown">{{title}}</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center">
+                        <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
+                        <li class="breadcrumb-item text-white active" aria-current="page">{{title}}</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-lg-4 col-md-12 wow fadeInUp mx-auto" data-wow-delay="0.5s">
+    <form loginForm="#ngForm" (ngSubmit)="login()">
+        <div class="row g-3">
+            <div class="col-12">
+                <div class="form-floating">
+                    <input type="email" class="form-control" id="email" placeholder="Email" name="email" [(ngModel)]="userObj.email">
+                    <label for="email">Email</label>
+                </div>
+            </div>
+           
+            <div class="col-12">
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="password" placeholder="Password" name="password" [(ngModel)]="userObj.password">
+                    <label for="password">Password</label>
+                    
+                </div>
+            </div>
+            <div class="col-12">
+                <button class="btn btn-primary w-100 py-3" type="submit">Login</button>
+            </div>
+        </div>
+    </form>
+</div>
